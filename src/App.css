@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Major Mono Display", monospace;
+    line-height: 1.5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+    min-height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f0e0e0;
+    color: #2c888d;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h2 {
+    color: #49b2b8;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.timer {
+    color: #1f6e72;
+    font-size: 150px;
+    margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons button {
+    outline: none;
+    border: none;
+    font-size: 24px;
+    background: #f57474;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+.buttons button:hover {
+    border-radius: 10px;
+    background: #f00041;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.buttons button:not(:last-child) {
+    margin-right: 10px;
+}
+
+@media (max-width: 780px) {
+    h2 {
+        font-size: 22px;
+    }
+
+    .timer {
+        font-size: 80px;
+    }
+
+    .buttons button {
+        font-size: 18px;
+    }
 }
